@@ -1,0 +1,11 @@
+---
+
+# VMware vCenter credentials
+vcenter_username: "administrator@handsonlab.local"
+vcenter_password: "xxxxxxxxxxxxxxxxxxxxx"
+
+# License to be assigned to the ESXi host
+esxi_license: "*****-*****-*****-*****-*****"
+
+# ESXi root password:
+root_password: "xxxxxxxxxxxxxxxxx"

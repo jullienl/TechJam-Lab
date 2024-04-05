@@ -1,0 +1,24 @@
+---
+#---------------------- DNS settings -------------------------------------------------------------------------------------
+
+# Information required for the creation of the DNS record
+
+# DNS domain name
+domain: "handsonlab.local"
+
+# MS Windows DNS server name (FQDN)
+dns_server: "dns.handsonlab.local"
+
+#---------------------- WinRM settings -------------------------------------------------------------------------------------
+
+
+# Windows DNS Server credentials
+ansible_user: "dnsadmin@handsonlab.local"
+ansible_password: "xxxxxxxxxxxxxxx"
+
+ansible_connection: winrm
+ansible_winrm_transport: ntlm
+ansible_port: 5985
+
+# The following is necessary for Python 2.7.9+ when using default WinRM self-signed certificates:
+ansible_winrm_server_cert_validation: ignore
