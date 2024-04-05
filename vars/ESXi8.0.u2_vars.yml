@@ -71,7 +71,7 @@ install_SWDrivers_policy: false
 #------------------------ ISO settings -------------------------------------------------------------------------------------
 
 # URL where the ISO image can be found
-src_iso_url: "http://webserver.handsonlab.local/deployment"
+src_iso_url: "http://holstaging01.hol.enablement.local/deployment"
 # ISO file name
 src_iso_file: "VMware-ESXi-8.0.2-22380479-HPE-802.0.0.11.4.0.14-Sep2023.iso"
 
