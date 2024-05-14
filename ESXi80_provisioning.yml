@@ -234,7 +234,7 @@
       return_content: yes
       headers:
         Authorization: "Bearer {{ access_token }}"
-    retries: 30
+    retries: 60
     delay: 5
     until: >
       (server_inventory_job_status.json.state == "COMPLETE" or 
@@ -785,7 +785,7 @@
       return_content: yes
       headers:
         Authorization: "Bearer {{ access_token }}"
-    retries: 30
+    retries: 60
     delay: 5
     until: >
       (server_inventory_job_status.json.state == "COMPLETE" or 
