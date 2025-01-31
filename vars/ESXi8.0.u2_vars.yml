@@ -32,8 +32,8 @@ hashed_root_password: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #---------------------- Server settings --------------------------------------------------------------------------------------
 
 # OS boot volume RAID type and size
-raid_type: RAID1       # Supported RAID types: RAID0, RAID1, RAID5
-volume_size_in_GB: -1  # It must be a number >0 or -1, where -1 indicates to use the entire disk.
+# raid_type: RAID1       # Supported RAID types: RAID0, RAID1, RAID5
+# volume_size_in_GB: -1  # It must be a number >0 or -1, where -1 indicates to use the entire disk.
 
 # BIOS/Workload profile
 workload_profile_name: "Virtualization - Power Efficient"       
@@ -55,10 +55,10 @@ firmware_server_setting_name: "Team-xx-ESXi-firmware-baseline"
 
 # Firmware baselines to be defined in the firmware server setting of the definitive server group 
 #  Note: it is mandatory to define at least one firmware baseline for Gen10/Gen10+ servers and one for Gen11 servers.
-Gen10_10p_firmware_bundle_name: "2023.03.00.00"  # "2023.03.00.00"
-Gen10_10p_patch_name_associated_with_firmware_bundle: "" # "2023.03.00.03"
-Gen11_firmware_bundle_name: "2023.04.00.00" # "2023.04.00.00"
-Gen11_patch_name_associated_with_firmware_bundle: "2023.04.00.05" #"2023.04.00.04"
+Gen10_10p_firmware_bundle_name: "2024.09.00.00"
+Gen10_10p_patch_name_associated_with_firmware_bundle: "" 
+Gen11_firmware_bundle_name: "2024.09.01.00"
+Gen11_patch_name_associated_with_firmware_bundle: "" 
 
 # Downgrade components policy to match baseline (boolean)
 # If "true", any component version higher than the baseline will be downgraded to match the baseline. 

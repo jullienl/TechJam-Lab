@@ -27,7 +27,7 @@ echo "CONTROLLER=$CONTROLLER" >> "${LOGFILE}" 2>&1
 
 if echo "$CONTROLLER" | grep -q "NS204i"; then
     # echo "The controller is an 'NS204i'" >> "${LOGFILE}" 2>&1
-    INDEX="t*"
+    INDEX="t*"  # an NVMe or SATA disk is detected as t10.nvme or t10.ATA vmfs disk by ESXi
 fi
 
 if echo "$CONTROLLER" | grep -q "SR"; then
@@ -36,7 +36,7 @@ if echo "$CONTROLLER" | grep -q "SR"; then
 fi 
 
 if echo "$CONTROLLER" | grep -q "MR"; then
-    echo "The controller is an 'MR controller'" >> "${LOGFILE}" 2>&1
+    # echo "The controller is an 'MR controller'" >> "${LOGFILE}" 2>&1
     INDEX="n*"
 fi 
 
@@ -118,6 +118,7 @@ fi
 esxcli system hostname set --host="{{inventory_hostname}}"
 esxcli system hostname set --fqdn="{{inventory_hostname}}.{{domain}}"
 esxcli network ip dns search add --domain="{{domain}}"
+esxcli system time set --day="{{ ansible_date_time.day }}" --month="{{ ansible_date_time.month }}" --year="{{ ansible_date_time.year }}" --hour="{{ ansible_date_time.hour }}" --min="{{ ansible_date_time.minute }}" --sec="{{ ansible_date_time.second }}"
 
 # Adding Ansible control node SSH public key to host authorized_keys 
 echo "Installing Ansible SSH public key"
