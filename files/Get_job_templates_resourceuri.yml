@@ -14,7 +14,7 @@
 ---
   - name: Capture all job templates
     uri:
-      url: "{{ ConnectivityEndpoint }}/compute-ops/{{ job_templates_API_version }}/job-templates"
+      url: "{{ ConnectivityEndpoint }}/compute-ops-mgmt/{{ job_templates_API_version }}/job-templates"
       method: GET
       status_code: 200
       headers:
